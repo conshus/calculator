@@ -1,0 +1,173 @@
+button {
+  font-family: "Share Tech Mono", monospace;
+  height: 12.5vh;
+  width: 12.5vh;
+  display: block;
+  float: left;
+  font-size: 6vh;
+  background: #989683;
+  box-sizing: border-box;
+  border: 1px solid #989683;
+  border-radius: 10px;
+  color: white;
+  margin: 1vh;
+  text-shadow:
+    rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
+    rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+    rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+  box-shadow:
+    inset .5vh .5vh .2vh rgba(255,255,255,0.3),
+    inset -.5vh -.5vh .2vh rgba(0,0,0,0.1),
+    .5vh .5vh .2vh rgba(0,0,0,0.2);
+  }
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  box-shadow:
+    inset .1vh .1vh .2vh rgba(255,255,255,0.3),
+    inset -.1vh -.1vh .2vh rgba(0,0,0,0.1),
+    .2vh .2vh .2vh rgba(0,0,0,0.2);
+}
+
+.branding {
+  float: left;
+  padding: 2.3vh;
+  padding-right: 0;
+  text-shadow:
+    rgba(0,0,0,0.2) -1px 0, rgba(0,0,0,0.2) 0 -1px,
+    rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+    rgba(0,0,0,0.2) -1px -1px, rgba(255,255,255,0.2) 1px 1px;
+  color: #e6e6e6;
+  width: 26vh;
+  font-size: 3vh;
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+}
+
+.trademark {
+  font-size: 1vh;
+  vertical-align: top;
+}
+
+.solar-panel {
+  height: 7vh;
+  margin: 2vh;
+  background:
+    repeating-linear-gradient(90deg, #030401, #030401 .1vh, #272F1B .1vh, #272F1B 5.92vh, #030401 6.02vh);
+  width: 30vh;
+  float: right;
+  border-radius: 3px;
+  box-shadow:
+    inset .7vh .7vh 1vh rgba(0,0,0,.3),
+    inset -.3vh -.3vh 1vh rgba(0,0,0,.3);
+  position: relative;
+}
+
+.solar-panel::after {
+  content: '';
+  position: absolute;
+  background:
+    linear-gradient(to top right, transparent 40%,  rgba(255,255,255,.1) 60%, transparent 90%);
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+
+#answer {
+  font-family: "Share Tech Mono", monospace;
+  color: #272F1B;
+  font-size: 9vh;
+  height: 12.5vh;
+  clear: right;
+  margin: 2vh 1.2vh 0 2.4vh;
+  border-radius: 2px;
+  box-shadow:
+    inset .5vh .5vh 1vh rgba(0,0,0,.1),
+    inset -.1vh -.1vh 1vh rgba(0,0,0,.1);
+  text-align: right;
+  padding-right: 1.5vh;
+  position: relative;
+  line-height: 13vh;
+  width: 39.5vh;
+  float: left;
+}
+
+#answer::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  background:
+    linear-gradient(to top right, rgba(0,0,0,.1) 10%, rgba(255,255,255,.3) 40%, rgba(0,0,0,.1) 90%);
+}
+
+.calculator {
+  background:#F7F7F7;
+  width: calc(60vh);
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  box-sizing: content-box;
+  padding-bottom: 1vh;
+}
+.calculator::after,
+.buttons::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+button.clear {
+  margin-top: 2vh;
+}
+
+.numbers {
+  width: 43.5vh;
+  float: left;
+  padding-left: 1vh;
+}
+
+.operators {
+  width: 12.5vh;
+  float: left;
+  padding-right: 1vh;
+}
+
+.operators button {
+  color: #272F1B;
+  background: #DADADA;
+  border-left-color: #DADADA;
+  border-top-color: #DADADA;
+  border-right-color: #b8b8b8;
+  border-bottom-color: #b8b8b8;
+  box-shadow:
+    inset .5vh .5vh .2vh rgba(255,255,255,0.3),
+    inset -.5vh -.5vh .2vh rgba(0,0,0,0.05),
+    .5vh .5vh .2vh rgba(0,0,0,0.1)
+}
+
+.operators button:active {
+  box-shadow:
+    inset .1vh .1vh .2vh rgba(255,255,255,0.3),
+    inset -.1vh -.1vh .2vh rgba(0,0,0,0.1),
+    .2vh .2vh .2vh rgba(0,0,0,0.2);
+}
+
+button.equals {
+  position: absolute;
+  bottom: 1vh;
+  right: 15.5vh;
+  background: #1665AF;
+  border-color: #1665AF;
+}
+
+#answer {
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+}
