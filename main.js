@@ -1,3 +1,10 @@
+/*
+√ Perform math on two single digit integers
+√ Make the numbers and calculations appear on the calculator display
+√ A decimal point
+√ A "clear" that clears the output area and the memory of the math being performed
+√ A button to flip between positive and negative
+*/
 function calculate() {
   total = 0;
   console.log("calculationArray right after calculate fn", calculationArray);
@@ -42,13 +49,19 @@ function addToDisplay(event) {
     console.log("cleared!");
     entry = "";
     display.textContent = "";
+  } else if (buttonPressed == "+/-"){
+    console.log("toggle positive and negative");
+    if ((operators.indexOf(entry) == -1) && (entry != "")){
+      entry = parseFloat(entry)*-1;
+      console.log (entry);
+      display.textContent = entry;
+    }
+
   } else if (buttonPressed == "="){
     console.log("calculate");
     calculationArray[calculationArray.length]=entry;
-
     calculate();
-  }
-  else {
+  } else {
     if (display.textContent != ""){
       if (entry != "" ){
       calculationArray[calculationArray.length]=entry;
@@ -64,10 +77,11 @@ function addToDisplay(event) {
         calculationArray[calculationArray.length]=buttonPressed;
         console.log("calculationArray after operator", calculationArray);
       }
+      display.textContent = buttonPressed;
     }
   }
 }
-let operators = ["(",")","÷","x","+","-","=","C"];
+let operators = ["(",")","÷","x","+","-","=","C","+/-"];
 let calculationArray = [];
 let display = document.querySelector("#answer");
 let buttons = document.querySelectorAll("button");
