@@ -166,8 +166,22 @@ button.equals {
   background: #1665AF;
   border-color: #1665AF;
 }
+/* Things I added */
 
 #answer {
   font-family: 'Press Start 2P', cursive;
   overflow: hidden;
+  height: 27.5vh;
+}
+.numbers {
+  position: absolute;
+  top: 16rem;
+}
+#result {
+  position:absolute;
+  top:10rem;
+  right:0;
+  width:39.5vh;
+  text-align: right;
+
 }
