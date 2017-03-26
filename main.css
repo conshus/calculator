@@ -170,18 +170,27 @@ button.equals {
 
 #answer {
   font-family: 'Press Start 2P', cursive;
+  font-size: 4vh;
   overflow: hidden;
   height: 27.5vh;
 }
 .numbers {
   position: absolute;
-  top: 16rem;
+  /*top: 18rem;*/
+  bottom: 1vh;
 }
 #result {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 5vh;
   position:absolute;
-  top:10rem;
-  right:0;
-  width:39.5vh;
+  top: 30.5vh;
+  left: 3vh;
+  width: 39.5vh;
+  height: 13vh;
   text-align: right;
+  line-height: 13vh;
 
+}
+.display{
+  position: relative;
 }
